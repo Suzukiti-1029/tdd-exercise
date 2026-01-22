@@ -19,6 +19,8 @@
 		"git.confirmSync": false,
 		"git.autofetch": true,
 		"redhat.telemetry.enabled": false,
-		"cSpell.words": []
+		"cSpell.words": [
+			"pytest"
+		]
 	}
 }
