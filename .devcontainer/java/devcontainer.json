@@ -1,0 +1,34 @@
+{
+  "build": {
+    "dockerfile": "../../docker/java/Dockerfile",
+    "context": "../../"
+  },
+  "workspaceFolder": "/tdd/java",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/tdd,type=bind",
+    "source=${localWorkspaceFolder}/tdd.code-workspace,target=/tdd/java/tdd.code-workspace,type=bind",
+    "source=m2,target=/root/.m2,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "git.openRepositoryInParentFolders": "always"
+      },
+      "extensions": [
+        "mhutchie.git-graph",
+        "streetsidesoftware.code-spell-checker",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "shd101wyy.markdown-preview-enhanced",
+        "christian-kohler.path-intellisense",
+        "gruntfuggly.todo-tree",
+        "redhat.vscode-yaml",
+        "mosapride.zenkaku",
+        "tamasfe.even-better-toml",
+        "saoudrizwan.claude-dev",
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
