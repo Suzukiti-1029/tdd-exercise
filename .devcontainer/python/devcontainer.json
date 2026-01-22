@@ -1,0 +1,47 @@
+{
+  "build": {
+    "dockerfile": "../../docker/python/Dockerfile",
+    "context": "../../"
+  },
+  "workspaceFolder": "/tdd/python",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/tdd,type=bind",
+    "source=${localWorkspaceFolder}/tdd.code-workspace,target=/tdd/python/tdd.code-workspace,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.analysis.typeCheckingMode": "strict",
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+          "--log-cli-level=DEBUG"
+        ],
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.autoSearchPaths": true,
+        "git.openRepositoryInParentFolders": "always"
+      },
+      "extensions": [
+        "mhutchie.git-graph",
+        "streetsidesoftware.code-spell-checker",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "shd101wyy.markdown-preview-enhanced",
+        "christian-kohler.path-intellisense",
+        "gruntfuggly.todo-tree",
+        "redhat.vscode-yaml",
+        "mosapride.zenkaku",
+        "tamasfe.even-better-toml",
+        "saoudrizwan.claude-dev",
+        "ms-python.python",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
+}
