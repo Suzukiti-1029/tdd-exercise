@@ -8,5 +8,5 @@ RUN apt update && \
 WORKDIR /tdd/python
 
 # 依存関係のインストール
-# COPY ./python/pyproject.toml ./python/uv.lock ./
-# RUN uv sync --frozen
+COPY ./python/pyproject.toml ./python/uv.lock ./
+RUN uv sync --frozen
