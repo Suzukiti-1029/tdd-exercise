@@ -1,6 +1,4 @@
-def main():
-    print("Hello from tdd!")
-
+from src.xunit import TestCaseTest
 
 if __name__ == "__main__":
-    main()
+    TestCaseTest("testRunning").run()
