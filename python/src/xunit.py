@@ -4,12 +4,16 @@ from typing import override
 class TestResult:
     def __init__(self) -> None:
         self.runCount = 0
+        self.errorCount = 0
 
     def testStarted(self):
         self.runCount += 1
 
+    def testFailed(self):
+        self.errorCount += 1
+
     def summary(self):
-        return f"{self.runCount} run, 0 failed"
+        return f"{self.runCount} run, {self.errorCount} failed"
 
 
 class TestCase:
@@ -26,8 +30,11 @@ class TestCase:
         result = TestResult()
         result.testStarted()
         self.setUp()
-        method = getattr(self, self.name)
-        method()
+        try:
+            method = getattr(self, self.name)
+            method()
+        except Exception:
+            result.testFailed()
         self.tearDown()
         return result
 
@@ -58,6 +65,15 @@ class TestCaseTest(TestCase):
         test = WasRun("testMethod")
         result = test.run()
         assert "1 run, 0 failed" == result.summary()
+
+    def testFailedResultFormatting(self):
+        """
+        testFailedResultFormatting は TestResult の単体テスト
+        """
+        result = TestResult()
+        result.testStarted()
+        result.testFailed()
+        assert "1 run, 1 failed" == result.summary()
 
     def testFailedResult(self):
         test = WasRun("testBrokenMethod")
