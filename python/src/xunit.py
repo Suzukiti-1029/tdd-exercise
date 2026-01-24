@@ -77,6 +77,5 @@ class TestCaseTest(TestCase):
 
     def testFailedResult(self):
         test = WasRun("testBrokenMethod")
-        # TODO 例外キャッチしてないので動かない
         result = test.run()
         assert "1 run, 1 failed" == result.summary()
