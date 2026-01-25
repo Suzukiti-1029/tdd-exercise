@@ -1,4 +1,4 @@
-package com.example.money;
+package money;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

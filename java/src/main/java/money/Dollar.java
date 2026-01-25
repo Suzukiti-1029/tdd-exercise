@@ -1,4 +1,4 @@
-package com.example.money;
+package money;
 
 class Dollar {
     int amount;
