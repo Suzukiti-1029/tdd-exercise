@@ -24,6 +24,5 @@
 			"pytest",
 			"xunit"
 		],
-		"java.configuration.updateBuildConfiguration": "automatic"
 	}
 }

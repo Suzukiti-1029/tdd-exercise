@@ -12,6 +12,12 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.debug.settings.onBuildFailureProceed": true,
+        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit"
+        },
         "git.openRepositoryInParentFolders": "always"
       },
       "extensions": [
