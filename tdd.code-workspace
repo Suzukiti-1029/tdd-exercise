@@ -20,7 +20,8 @@
 		"git.autofetch": true,
 		"redhat.telemetry.enabled": false,
 		"cSpell.words": [
-			"pytest"
+			"pytest",
+			"xunit"
 		]
 	}
 }
