@@ -20,8 +20,10 @@
 		"git.autofetch": true,
 		"redhat.telemetry.enabled": false,
 		"cSpell.words": [
+			"assertj",
 			"pytest",
 			"xunit"
-		]
+		],
+		"java.configuration.updateBuildConfiguration": "automatic"
 	}
 }
