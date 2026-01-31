@@ -7,24 +7,24 @@ import org.junit.jupiter.api.Test;
 public class MoneyTest {
     @Test
     public void testMultiplication() {
-        var five = new Dollar(5);
-        assertThat(five.times(2)).isEqualTo(new Dollar(10));
-        assertThat(five.times(3)).isEqualTo(new Dollar(15));
+        Money five = Money.dollar(5);
+        assertThat(five.times(2)).isEqualTo(Money.dollar(10));
+        assertThat(five.times(3)).isEqualTo(Money.dollar(15));
     }
 
     @Test
     public void testEquality() {
-        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
-        assertThat(new Dollar(5).equals(new Dollar(6))).isFalse();
-        assertThat(new Franc(5).equals(new Franc(5))).isTrue();
-        assertThat(new Franc(5).equals(new Franc(6))).isFalse();
-        assertThat(new Franc(5).equals(new Dollar(5))).isFalse();
+        assertThat(Money.dollar(5).equals(Money.dollar(5))).isTrue();
+        assertThat(Money.dollar(5).equals(Money.dollar(6))).isFalse();
+        assertThat(Money.franc(5).equals(Money.franc(5))).isTrue();
+        assertThat(Money.franc(5).equals(Money.franc(6))).isFalse();
+        assertThat(Money.franc(5).equals(Money.dollar(5))).isFalse();
     }
 
     @Test
     public void testFrancMultiplication() {
-        var five = new Franc(5);
-        assertThat(five.times(2)).isEqualTo(new Franc(10));
-        assertThat(five.times(3)).isEqualTo(new Franc(15));
+        var five = Money.franc(5);
+        assertThat(five.times(2)).isEqualTo(Money.franc(10));
+        assertThat(five.times(3)).isEqualTo(Money.franc(15));
     }
 }
