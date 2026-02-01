@@ -1,6 +1,6 @@
 package money;
 
-class Money {
+class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -23,6 +23,10 @@ class Money {
 
     String currency() {
         return currency;
+    }
+
+    Expression plus(Money money) {
+        return new Money(amount + money.amount, currency);
     }
 
     @Override
